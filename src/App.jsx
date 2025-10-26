@@ -1,12 +1,13 @@
 import "./App.css";
 import SplitText from "./components/SplitText";
+import BlurText from "./components/BlurText";
 
 function App() {
   return (
     <>
       <SplitText
-        text="Hello, GSAP!"
-        className="text-2xl font-semibold text-center"
+        text="Be a force"
+        className="text-parent"
         delay={100}
         duration={0.6}
         ease="power3.out"
@@ -16,9 +17,13 @@ function App() {
         threshold={0.1}
         rootMargin="-100px"
         textAlign="center"
-        onLetterAnimationComplete={() =>
-          console.log("All letters have animated!")
-        }
+      />
+      <BlurText
+        text="Be a force"
+        className="text-parent"
+        delay={50}
+        animateBy="letters"
+        direction="bottom"
       />
     </>
   );
